@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/islami_background"
+    tools:context=".fragments.QuranFragment">
+
+    <TextView
+        android:id="@+id/islami_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/islami"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <ImageView
+        android:id="@+id/quran_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/quran_image"
+        app:layout_constraintEnd_toEndOf="@id/islami_text"
+        app:layout_constraintHeight_percent=".25"
+        app:layout_constraintStart_toStartOf="@id/islami_text"
+        app:layout_constraintTop_toBottomOf="@id/islami_text" />
+
+    <View
+        android:id="@+id/top_border"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorGold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quran_image" />
+
+    <TextView
+        android:id="@+id/sura_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sura_name"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/divider_border"
+        app:layout_constraintTop_toBottomOf="@id/top_border" />
+
+    <TextView
+        android:id="@+id/ayat_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ayat_number"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@id/divider_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_border" />
+
+    <View
+        android:id="@+id/bottom_border"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorGold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sura_name" />
+
+    <View
+        android:id="@+id/divider_border"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="@color/colorGold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_border" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quran_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_border"
+        tools:listitem="@layout/quran_list_item"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

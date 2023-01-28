@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+    android:id="@+id/hadeth_name_tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="الحديث الاول"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:textSize="30sp"
+    android:gravity="center"
+    android:textStyle="bold"
+    />
+    <View
+        android:id="@+id/devidor"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/colorGold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hadeth_name_tv"
+        app:layout_constraintWidth_percent=".75"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

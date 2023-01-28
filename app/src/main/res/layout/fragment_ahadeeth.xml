@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/islami_background"
+    tools:context=".fragments.AhadeethFragment">
+
+    <Toolbar
+        android:id="@+id/ahadeth_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="اسلامي"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </Toolbar>
+
+    <ImageView
+        android:id="@+id/ahadeth_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ahadeth_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ahadeth_tool_bar"
+        app:layout_constraintWidth_percent=".6" />
+
+
+    <View
+        android:id="@+id/top_border"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorGold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ahadeth_image" />
+
+    <TextView
+        android:id="@+id/ahadeth_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الاحاديث"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_border" />
+
+    <View
+        android:id="@+id/bottom_border"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorGold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ahadeth_tv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ahadeth_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/ahadeth_item"
+        app:layout_constraintTop_toBottomOf="@id/bottom_border" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
